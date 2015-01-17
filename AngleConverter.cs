@@ -34,17 +34,21 @@ class Angle
      get { return this.degrees; }
      set { this.degrees = value; }
     }
+	//Previous methods allow for modifications to the private variables
 
     public double Sin { get { return Math.Sin( this.radians ); } }
     public double Cos { get { return Math.Cos( this.radians ); } }
     public double Tan { get { return Math.Tan( this.radians ); } }
 	
+	//Calculates various operations on the angle
+	
 	
 
     public override string ToString( )
     {
-    return string.Format( "{0} ({1}\u00b0)", this.radians, this.Degrees );
+        return string.Format( "{0} ({1}\u00b0)", this.radians, this.Degrees );
 	}
+	//String method which formats the angle
 	
 }
 
@@ -57,6 +61,7 @@ static class Program
 
     a.Degrees = 30.0;
 	a.Radians = Math.PI / 6.0;
+	//Defines the angle
 
 
     Console.WriteLine( );
@@ -66,6 +71,7 @@ static class Program
     Console.WriteLine( "a.Sin = {0}", a.Sin );
     Console.WriteLine( "a.Cos = {0}", a.Cos );
     Console.WriteLine( "a.Tan = {0}", a.Tan );
+	//Prints the final statements
     }
 }
 
